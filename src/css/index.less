@@ -35,8 +35,23 @@
   .content-item{
     margin: 10px;
     background: @color-white;
+    .item-img{
+      height: 150px;
+      background-position: center center;
+      background-size: cover;
+      display: block;
+    }
     .item-text{
-      padding: 5px;
+      padding: 15px;
+      h6{
+        color: @color-gray;
+      }
+      p{
+        font-size: 0.6em;
+        a{
+          float: right;
+        }
+      }
     }
   }
 
@@ -46,7 +61,7 @@
 .single{
   background: @color-white;
   margin: 20px 0;
-  padding: 20px;
+  padding: 20px 0;
   .single-img{
     background-position: top center;
     background-size: cover;

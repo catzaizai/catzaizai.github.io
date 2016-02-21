@@ -31,13 +31,28 @@
   margin: 10px;
   background: #fff;
 }
+.content .content-item .item-img {
+  height: 150px;
+  background-position: center center;
+  background-size: cover;
+  display: block;
+}
 .content .content-item .item-text {
-  padding: 5px;
+  padding: 15px;
+}
+.content .content-item .item-text h6 {
+  color: #999;
+}
+.content .content-item .item-text p {
+  font-size: 0.6em;
+}
+.content .content-item .item-text p a {
+  float: right;
 }
 .single {
   background: #fff;
   margin: 20px 0;
-  padding: 20px;
+  padding: 20px 0;
 }
 .single .single-img {
   background-position: top center;
