@@ -18,20 +18,30 @@
 
         _init: function(){
             this.$element.on({
-                'click': $.proxy(this.click, this)
-            })
-        }
-    };
+               'click': $.proxy(this.click, this)
+            });
+        },
 
-    NavToggle.prototype.click = function(){
-        if(this.$nav.hasClass("open")){
+        click: function(){
+            if(this.$nav.hasClass("open")){
+                this.closeNav();
+            }else{
+                this.openNav();
+            }
+        },
+
+        closeNav: function(){
             this.$nav.removeClass("open");
             this.$main.removeClass("offset");
-        }else{
+        },
+
+        openNav: function(){
             this.$nav.addClass("open");
             this.$main.addClass("offset")
         }
     };
+
+
 
     $.fn.navToggle = function(option){
         return this.each(function(){

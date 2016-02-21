@@ -49,6 +49,38 @@ nav .menu-container ul li a:focus {
   text-decoration: none;
   color: #999;
 }
+nav .menu-container ul li a::before,
+nav .menu-container ul li a::after {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform .3s,opacity .2s;
+  line-height: 1.6em;
+}
+nav .menu-container ul li a::before {
+  margin-right: 5px;
+  content: '[';
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
+  color: #fff;
+}
+nav .menu-container ul li a::after {
+  margin-left: 5px;
+  content: ']';
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px);
+  color: #fff;
+}
+nav .menu-container ul li a:hover::before,
+nav .menu-container ul li a:hover:after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+}
 nav.open {
   right: 0;
 }
