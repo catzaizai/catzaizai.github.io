@@ -24,7 +24,7 @@ module.exports = function(grunt){
             },
             target: {
                 files: {
-                    'build/main.min.css': ['src/css/base.css']
+                    'build/main.min.css': ['src/css/base.css', 'src/css/index.css']
                 }
             }
         }
