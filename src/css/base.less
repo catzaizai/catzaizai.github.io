@@ -1,12 +1,71 @@
 @background: #f1f1f1;
 @color-black: #000;
 @color-white: #fff;
+
 @backgrount-image: url('../images/bg.jpg');
+
+@nav-background: #222;
+@nav-hover-color: #999;
+@nav-font-size: 16px;
+@nav-width: 240px;
 
 body{
   font-size: 14px;
-  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+  font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
   background: @background;
+  line-height: 1.6;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  &.offset{
+    margin-left:-@nav-width;
+    margin-right: @nav-width;
+  }
+}
+
+
+nav{
+  position: fixed;
+  top:0;
+  right:-@nav-width;
+  bottom: 0;
+  width: @nav-width;
+  background: @nav-background;
+  color: @color-white;
+  z-index: 1000;
+  height: 100%;
+  font-size: @nav-font-size;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  .menu-container{
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin: 0;
+    ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li{
+        a{
+          padding: 0.4em 1em;
+          display: block;
+          color: #fff;
+          font-size: 1em;
+          &:hover, &:focus{
+            text-decoration: none;
+            color:@nav-hover-color;
+          }
+        }
+      }
+    }
+  }
+
+  &.open{
+    right:0;
+  }
 }
 
 header{
@@ -25,6 +84,7 @@ header{
     padding: 3px 9px;
     font-size: 18px;
     color: @color-black;
+    cursor: pointer;
     &:hover, &:focus{
       color: @color-white;
       background: @color-black;

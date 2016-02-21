@@ -10,9 +10,10 @@ module.exports = function(grunt){
                 stripBanners: true,
                 banner: '/*! <%=pkg.name%>-<%=pkg.version%>.js <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
-            build: {
-                src: 'src/js/base.js',
-                dest: 'build/<%=pkg.name%>-<%=pkg.version%>.js.min.js'
+            my_target: {
+                files:{
+                    'build/<%=pkg.name%>-<%=pkg.version%>.min.js':['src/js/navToggle.js', 'src/js/base.js']
+                }
             }
         },
 

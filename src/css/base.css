@@ -1,7 +1,56 @@
 body {
   font-size: 14px;
-  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+  font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
   background: #f1f1f1;
+  line-height: 1.6;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+body.offset {
+  margin-left: -240px;
+  margin-right: 240px;
+}
+nav {
+  position: fixed;
+  top: 0;
+  right: -240px;
+  bottom: 0;
+  width: 240px;
+  background: #222;
+  color: #fff;
+  z-index: 1000;
+  height: 100%;
+  font-size: 16px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+nav .menu-container {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin: 0;
+}
+nav .menu-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav .menu-container ul li a {
+  padding: 0.4em 1em;
+  display: block;
+  color: #fff;
+  font-size: 1em;
+}
+nav .menu-container ul li a:hover,
+nav .menu-container ul li a:focus {
+  text-decoration: none;
+  color: #999;
+}
+nav.open {
+  right: 0;
 }
 header {
   width: 100%;
@@ -20,6 +69,7 @@ header .bar {
   padding: 3px 9px;
   font-size: 18px;
   color: #000;
+  cursor: pointer;
 }
 header .bar:hover,
 header .bar:focus {
