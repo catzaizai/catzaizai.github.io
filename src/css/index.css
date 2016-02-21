@@ -40,13 +40,20 @@
 .content .content-item .item-text {
   padding: 15px;
 }
+.content .content-item .item-text a {
+  text-decoration: none;
+  color: #000;
+}
+.content .content-item .item-text a:hover {
+  color: #999;
+}
 .content .content-item .item-text h6 {
   color: #999;
 }
 .content .content-item .item-text p {
   font-size: 0.6em;
 }
-.content .content-item .item-text p a {
+.content .content-item .item-text p span {
   float: right;
 }
 .single {
