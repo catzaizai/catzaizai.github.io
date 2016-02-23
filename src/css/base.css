@@ -116,9 +116,9 @@ header .bar:focus {
 header.show {
   background: #efefef;
   position: fixed;
-  -webkit-box-shadow: 0 2px 2px #999999;
-  -moz-box-shadow: 0 2px 2px #999999;
-  box-shadow: 0 2px 2px #999999;
+  -webkit-box-shadow: 0 2px 4px #999999;
+  -moz-box-shadow: 0 2px 4px #999999;
+  box-shadow: 0 2px 4px #999999;
   padding: 10px;
 }
 footer .contact {
