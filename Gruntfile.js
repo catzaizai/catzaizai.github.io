@@ -12,7 +12,7 @@ module.exports = function(grunt){
             },
             my_target: {
                 files:{
-                    'build/<%=pkg.name%>-<%=pkg.version%>.min.js':['src/js/navToggle.js', 'src/js/base.js']
+                    'build/<%=pkg.name%>-<%=pkg.version%>.min.js':['src/js/navToggle.js', 'src/js/headerToggle.js', 'src/js/base.js']
                 }
             }
         },
