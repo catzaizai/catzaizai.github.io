@@ -116,10 +116,17 @@ header .bar:focus {
 header.show {
   background: #efefef;
   position: fixed;
-  -webkit-box-shadow: 0 2px 4px #999999;
-  -moz-box-shadow: 0 2px 4px #999999;
-  box-shadow: 0 2px 4px #999999;
+  -webkit-box-shadow: 0 2px 4px #989898;
+  -moz-box-shadow: 0 2px 4px #989898;
+  box-shadow: 0 2px 4px #989898;
   padding: 10px;
+}
+footer {
+  clear: both;
+  position: relative;
+  bottom: 0;
+  background: #494a49;
+  color: #fff;
 }
 footer .contact {
   text-align: center;

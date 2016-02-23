@@ -20,7 +20,6 @@ body{
   }
 }
 
-
 nav{
   position: fixed;
   top:0;
@@ -98,13 +97,12 @@ header{
   width: 100%;
   position: absolute;
   top: 0;
-  -webkit-transition: background .3s ease-in-out,padding .3s ease-in-out;
-  transition: background .3s ease-in-out,padding .3s ease-in-out;
+  .transition(background .3s ease-in-out,padding .3s ease-in-out);
   z-index: 999;
   padding: 20px;
   h3{
     float: left;
-    font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+    font-family: @font-family;
     margin: 5px;
     line-height: 38px;
   }
@@ -124,16 +122,17 @@ header{
   &.show{
     background: @color-lightGray;
     position: fixed;
-    -webkit-box-shadow: 0 2px 4px @color-shadow;
-    -moz-box-shadow: 0 2px 4px @color-shadow;
-    box-shadow: 0 2px 4px @color-shadow;
+    .box-shadow(0 2px 4px, @color-shadow);
     padding: 10px;
   }
 }
 
-
-
 footer{
+  clear: both;
+  position: relative;
+  bottom: 0;
+  background: @color-grey;
+  color:@color-white;
   .contact {
     text-align: center;
     height: 60px;
