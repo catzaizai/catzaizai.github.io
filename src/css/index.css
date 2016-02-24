@@ -38,6 +38,15 @@
 .content .content-item {
   margin: 10px;
   background: #fff;
+  -webkit-transition: box-shadow 0.5s linear;
+  -moz-transition: box-shadow 0.5s linear;
+  transition: box-shadow 0.5s linear;
+}
+.content .content-item:hover,
+.content .content-item:focus {
+  -webkit-box-shadow: 2px 2px 10px #494a49;
+  -moz-box-shadow: 2px 2px 10px #494a49;
+  box-shadow: 2px 2px 10px #494a49;
 }
 .content .content-item .item-img {
   height: 150px;
