@@ -91,7 +91,7 @@ header {
   -webkit-transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
   transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
-  z-index: 999;
+  z-index: 2;
   padding: 20px;
 }
 header h3 {

@@ -9,3 +9,38 @@
 .content{
   .content();
 }
+
+.cover-content{
+  position: absolute;
+  margin: 10px;
+  .transition(all .3s linear);
+  .box-shadow(2px 2px 10px, @color-grey2);
+  background: @color-lightGray;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  .content();
+  .cover-close{
+    border-radius: 20px;
+    border: 2px solid @color-grey;
+    color: @color-grey;
+    position: absolute;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    top: 10px;
+    padding: 2px 5px;
+    cursor: pointer;
+    &:hover{
+      color: @color-grey2;
+      border: 2px solid @color-grey2;
+    }
+  }
+}
+
+.mask-layer{
+  position: fixed;
+  z-index: 3;
+}

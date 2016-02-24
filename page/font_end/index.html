@@ -56,14 +56,14 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="content-item">
+                <div class="content-item" data-href="/catzaizai.github.io/page/font_end/_form.html">
                     <div class="item-img" style="background-image: url('images/card.png')"></div>
                     <div class="item-text">
-                        <a href="/page/font_end/_form.html">
+                        <div>
                             <h6>jQuery Bootstrap</h6>
                             <h5>表单验证代码</h5>
                             <p>基于jQuery 和 bootstrap 的各种表单验证实现</p>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -106,10 +106,13 @@
         </div>
     </div>
 </section>
-<section class="cover-content">
-    <div class="container">
-        <div class="row">
+<section class="mask-layer">
+    <div class="cover-content">
+        <div class="cover-close"><i class="fa fa-close fa-2x"></i></div>
+        <div class="container">
+            <div class="row">
 
+            </div>
         </div>
     </div>
 </section>
@@ -128,5 +131,8 @@
 <script type="text/javascript" src="../../bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../../build/homepage-0.0.1.min.js"></script>
+<script type="text/javascript">
+    $(".content-item").expandingOverlay();
+</script>
 </body>
 </html>
