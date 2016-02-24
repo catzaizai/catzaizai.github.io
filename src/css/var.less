@@ -59,7 +59,7 @@
   .content-item {
     margin: 10px;
     background: @color-white;
-    .transition(box-shadow .5s linear);
+    .transition(box-shadow .3s linear);
     &:hover, &:focus{
       .box-shadow(2px 2px 10px, @color-grey);
     }
@@ -84,6 +84,9 @@
       }
       p {
         font-size: 0.6em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         span {
           float: right;
         }

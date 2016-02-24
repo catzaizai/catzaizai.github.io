@@ -38,9 +38,9 @@
 .content .content-item {
   margin: 10px;
   background: #fff;
-  -webkit-transition: box-shadow 0.5s linear;
-  -moz-transition: box-shadow 0.5s linear;
-  transition: box-shadow 0.5s linear;
+  -webkit-transition: box-shadow 0.3s linear;
+  -moz-transition: box-shadow 0.3s linear;
+  transition: box-shadow 0.3s linear;
 }
 .content .content-item:hover,
 .content .content-item:focus {
@@ -70,6 +70,9 @@
 }
 .content .content-item .item-text p {
   font-size: 0.6em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .content .content-item .item-text p span {
   float: right;
