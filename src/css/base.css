@@ -130,9 +130,5 @@ footer {
 }
 footer .contact {
   text-align: center;
-  height: 60px;
-}
-footer .copyright {
-  height: 30px;
-  background: #fff;
+  margin: 30px 0;
 }
