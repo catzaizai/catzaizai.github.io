@@ -40,7 +40,7 @@
     <div class="container work-title">
         <h1>猫崽崽的个人主页</h1>
         <p>欢迎访问猫崽崽的个人主页 (还在持续建设中...)</p>
-        <a href="https://github.com/catzaizai" class="btn">MY PROJECT</a>
+        <a href="javascript:void(0);" id="project" class="btn">MY PROJECT</a>
     </div>
 </section>
 <section class="content">
@@ -105,5 +105,22 @@
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="build/homepage-0.0.1.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#project").click(function(){
+            var text = $(this).text();
+            if(text == "MY PROJECT"){
+                var height = $(".content").children(".container").height();
+                $(".content").css({"height": height + 40});
+                $(".home-work").css("padding", "20px 0");
+                $(this).text("CLOSE");
+            } else{
+                $(".content").css({"height": "0"});
+                $(".home-work").css("padding", "200px 0");
+                $(this).text("MY PROJECT");
+            }
+        })
+    })
+</script>
 </body>
 </html>

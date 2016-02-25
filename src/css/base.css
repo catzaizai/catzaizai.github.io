@@ -161,7 +161,12 @@ footer .contact {
   box-shadow: 2px 2px 10px #c1c3bf;
   background: #b5d6ce;
   height: 100%;
-  padding: 20px 0;
+  -webkit-transition: all 0.6s linear;
+  -moz-transition: all 0.6s linear;
+  transition: all 0.6s linear;
+}
+.cover-content .container {
+  padding: 20px;
 }
 .cover-content .content-item {
   margin: 10px;
