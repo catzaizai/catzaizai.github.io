@@ -1,6 +1,7 @@
 /**
  * Created by 猫崽崽 on 24/2/2016.
  */
+/** Depend loading.js **/
 
 (function(window, document, $, undefined){
     var ExpandingOverlay = function(element){
@@ -11,8 +12,6 @@
         this.$container = null;
         this.close = ".cover-close";
         this.$close = null;
-        this.isShow = false;
-
         this._init();
     };
 
@@ -34,6 +33,7 @@
         click: function(){
             if(!this.href) return;
             var scope = this;
+            this.$element.loading();
             $.get(this.href, {}, function(html){
                 $(scope.container + " .cover-content .container .row").html(html);
                 scope.openMask();
@@ -68,6 +68,7 @@
                 var docWidth = $(document).width();
                 var docHeight = $(document).height();
                 scope.$container.css("clip", "rect("+ "0px "+ docWidth +"px " + docHeight + "px " + "0px" +")");
+                scope.$element.loading("hide");
             }, 1000);
         },
 

@@ -45,6 +45,18 @@
   transition: @style1;
 }
 
+.animation(@style){
+  -webkit-animation: @style;
+  -moz-animation: @style;
+  animation: @style;
+}
+
+.animation-delay(@style){
+  -webkit-animation-delay: @style;
+  -moz-animation-delay: @style;
+  animation-delay: @style;
+}
+
 .work(@image) {
   padding: 120px 0;
   background-image: @image;
