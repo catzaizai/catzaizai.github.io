@@ -8,7 +8,7 @@
         this.$element = $(element);
         this.html = "";
         this.container = ".mask-layer";
-        this.$container = null;;
+        this.$container = null;
         this.close = ".cover-close";
         this.$close = null;
         this.isShow = false;
@@ -27,7 +27,7 @@
                 "click": $.proxy(this.click, this)
             });
             this.$close.on({
-                "click": $.proxy(this.hide, this)
+                "click": $.proxy(this.closeMask, this)
             });
         },
 
@@ -36,8 +36,7 @@
             var scope = this;
             $.get(this.href, {}, function(html){
                 $(scope.container + " .cover-content .container .row").html(html);
-                scope.show();
-                scope.open();
+                scope.openMask();
             })
         },
 
@@ -58,20 +57,22 @@
             this.$close = $(this.close);
         },
 
-        show: function(){
+        openMask: function(){
+            var scope = this;
             var point = this.$element.offset();
             var width = this.$element.width();
             var height = this.$element.height();
-            this.$container.css({"top":point.top, "left": point.left, "width": width, "height": height});
-            this.$container.show();
+            this.$container.css("clip", "rect("+ point.top +"px "+ (point.left + width) +"px " + (point.top + height) + "px " + point.left + "px" +")");
+            this.$container.css({"opacity":1, "z-index": 3});
+            window.setTimeout(function(){
+                var docWidth = $(document).width();
+                var docHeight = $(document).height();
+                scope.$container.css("clip", "rect("+ "0px "+ docWidth +"px " + docHeight + "px " + "0px" +")");
+            }, 1000);
         },
 
-        open: function(){
-            this.$container.animate({"top":"0", "left": "0", "bottom": "0", "right":"0" ,"width": "100%", "height":"100%"}, 600, "linear");
-        },
-
-        hide: function(){
-            this.$container.hide();
+        closeMask: function(){
+            this.$container.css({"opacity":0, "z-index": -1, "clip":"auto"});
         },
 
         format: function(){
