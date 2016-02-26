@@ -18,7 +18,8 @@
 
         _init: function(){
             this.$element.on({
-               'click': $.proxy(this.click, this)
+               'click': $.proxy(this.click, this),
+                'blur': $.proxy(this.blur, this)
             });
         },
 
@@ -28,6 +29,10 @@
             }else{
                 this.openNav();
             }
+        },
+
+        blur: function(){
+            this.closeNav();
         },
 
         closeNav: function(){

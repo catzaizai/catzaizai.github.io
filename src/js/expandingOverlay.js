@@ -62,7 +62,8 @@
             var point = this.$element.offset();
             var width = this.$element.width();
             var height = this.$element.height();
-            this.$container.css("clip", "rect("+ point.top +"px "+ (point.left + width) +"px " + (point.top + height) + "px " + point.left + "px" +")");
+            var $doc = $(document);
+            this.$container.css("clip", "rect("+ point.top + $doc.scrollTop() +"px "+ (point.left + width) +"px " + (point.top + height + $doc.scrollTop()) + "px " + point.left + "px" +")");
             this.$container.css({"opacity":1, "z-index": 3});
             window.setTimeout(function(){
                 var docWidth = $(document).width();

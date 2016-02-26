@@ -6,7 +6,8 @@
 (function(angular){
     angular.module('fontEnd', []).controller('fontEndCtrl', function($scope, $http) {
         $scope.loadData = function(){
-            $http.get("/api/data.json")
+            $http.get("/database/data.json");
+
         }
     });
 })(angular);

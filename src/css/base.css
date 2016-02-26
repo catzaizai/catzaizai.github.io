@@ -1,3 +1,8 @@
+a:focus {
+  outline: none;
+  outline-offset: 0;
+  text-decoration: none;
+}
 @-webkit-keyframes stretch-delay {
   0%,
   40%,
