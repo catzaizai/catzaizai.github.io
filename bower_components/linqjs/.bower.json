@@ -1,0 +1,35 @@
+{
+  "name": "linqjs",
+  "homepage": "https://github.com/joaom182/linqjs",
+  "authors": [
+    "João Marcos Mainka <joaom182@hotmail.com>"
+  ],
+  "description": "Simple LINQ library for JavaScript",
+  "main": "dist/linq.js",
+  "keywords": [
+    "linq",
+    "javascript",
+    "extension",
+    "methods",
+    "array"
+  ],
+  "license": "MIT",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "200583eab6",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "200583eab6147dec8b4457e303adfec2e46cdda5"
+  },
+  "_source": "git://github.com/joaom182/linqjs.git",
+  "_target": "*",
+  "_originalSource": "jslinq",
+  "_direct": true
+}

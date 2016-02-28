@@ -203,7 +203,10 @@ footer .contact {
   color: #000;
 }
 .cover-content .content-item .item-text h6 {
-  color: #494a49;
+  color: #c1c3bf;
+}
+.cover-content .content-item .item-text h6 span {
+  margin-right: 5px;
 }
 .cover-content .content-item .item-text p {
   font-size: 0.6em;

@@ -52,66 +52,18 @@
         <span class="label label-info">Cordova/ionic</span>
     </p>
 </section>
-<section class="content">
+<section class="content" ng-app="fontEnd" ng-controller="fontEndCtrl" ng-init="loadData()">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-4 col-sm-6" ng-repeat="item in data">
                 <div class="content-item" data-href="/page/font_end/form.html">
-                    <div class="item-img" style="background-image: url('../../images/card.png')"></div>
+                    <div class="item-img" ng-style="getBackground(item.img)"></div>
                     <div class="item-text">
                         <div>
-                            <h6>jQuery Bootstrap</h6>
-                            <h5>表单验证代码</h5>
-                            <p>基于jQuery 和 bootstrap 的各种表单验证实现</p>
+                            <h6><span ng-repeat="tag in item.tag" ng-bind="tag"></span></h6>
+                            <h5 ng-bind="item.title"></h5>
+                            <p ng-bind="item.info"></p>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="content-item">
-                    <div class="item-img" style="background-image: url('../../images/card.png')"></div>
-                    <div class="item-text">
-                        <a href="#">
-                            <h6>jQuery Bootstrap</h6>
-                            <h5>图片相关代码</h5>
-                            <p>所有图片相关的javascript/jquery处理库</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="content-item">
-                    <div class="item-img" style="background-image: url('../../images/card.png')"></div>
-                    <div class="item-text">
-                        <a href="#">
-                            <h6>jQuery</h6>
-                            <h5>jQuery 小插件</h5>
-                            <p>就是各种小插件 可能和前面两个有重合</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="content-item">
-                    <div class="item-img" style="background-image: url('../../images/card.png')"></div>
-                    <div class="item-text">
-                        <a href="#">
-                            <h6>Javascript</h6>
-                            <h5>前端小游戏</h5>
-                            <p>游戏啦 创意都不是自己的。。。</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="content-item">
-                    <div class="item-img" style="background-image: url('../../images/card.png')"></div>
-                    <div class="item-text">
-                        <a href="#">
-                            <h6>NodeJs</h6>
-                            <h5>NodeJs 博客系统</h5>
-                            <p>删了又写，迟迟不肯发布的博客。。。</p>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -142,7 +94,9 @@
 
 <script type="text/javascript" src="../../bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../bower_components/angular/angular.min.js"></script>
 <script type="text/javascript" src="../../build/homepage-0.0.1.min.js"></script>
+<script type="text/javascript" src="../../src/js/page/fontEnd.js"></script>
 <script type="text/javascript">
     $(".content-item").expandingOverlay();
 </script>

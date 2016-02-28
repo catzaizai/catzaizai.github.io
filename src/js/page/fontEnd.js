@@ -3,11 +3,16 @@
  */
 /** Depend angularJs **/
 
-(function(angular){
-    angular.module('fontEnd', []).controller('fontEndCtrl', function($scope, $http) {
-        $scope.loadData = function(){
-            $http.get("/database/data.json");
 
-        }
-    });
-})(angular);
+angular.module('fontEnd', []).controller('fontEndCtrl', function($scope, $http) {
+    $scope.data = [];
+    $scope.loadData = function(){
+        $http.get("/catzaizai.github.io/database/font_end.json").success(function(result){
+            $scope.data = result;
+        })
+    };
+    $scope.getBackground = function(img){
+        return {'background-image': 'url('+ img +')'}
+    }
+});
+
