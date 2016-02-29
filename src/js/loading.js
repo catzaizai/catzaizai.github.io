@@ -69,7 +69,8 @@
             if(!data){
                 data = new Loading(this, $.extend($.fn.loading.default, param));
             }else{
-                data = $.extend($.fn.loading.default, data, param);
+                data = $.extend(data,$.fn.loading.default, param);
+                data.$element = $this;
                 data.execute();
             }
             $this.data("loading", data);
