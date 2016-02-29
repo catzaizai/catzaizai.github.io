@@ -98,7 +98,9 @@
 <script type="text/javascript" src="../../build/homepage-0.0.1.min.js"></script>
 <script type="text/javascript" src="../../src/js/page/fontEnd.js"></script>
 <script type="text/javascript">
-    $(".content-item").expandingOverlay();
+    $(".content").on("click", ".content-item", function(){
+        $(this).expandingOverlay("show");
+    });
 </script>
 </body>
 </html>

@@ -4,7 +4,7 @@
 /** Depend loading.js **/
 
 (function(window, document, $, undefined){
-    var ExpandingOverlay = function(element){
+    var ExpandingOverlay = function(element, option){
         this.href = "";
         this.$element = $(element);
         this.html = "";
@@ -12,6 +12,7 @@
         this.$container = null;
         this.close = ".cover-close";
         this.$close = null;
+        this.command = option.command;
         this._init();
     };
 
@@ -28,9 +29,21 @@
             this.$close.on({
                 "click": $.proxy(this.closeMask, this)
             });
+
+            switch(this.command){
+                case "show":
+                    this.getContent();
+                    break;
+                default:
+                    break;
+            }
         },
 
         click: function(){
+            this.getContent();
+        },
+
+        getContent: function(){
             if(!this.href) return;
             var scope = this;
             this.$element.loading();
@@ -89,15 +102,23 @@
         }
     };
 
-    $.fn.expandingOverlay = function(){
+    $.fn.expandingOverlay = function(option){
         return this.each(function(){
             var $this = $(this);
             var data = $this.data("expandingOverlay");
             if(!data){
-                data = new ExpandingOverlay(this)
+                if(typeof option == "string"){
+                    data = new ExpandingOverlay(this, $.extend(data, $.fn.expandingOverlay.default, { "command": option }))
+                }else {
+                    data = new ExpandingOverlay(this)
+                }
             }
             $this.data("expandingOverlay", data);
         })
+    };
+
+    $.fn.expandingOverlay.default = {
+        command: ""
     }
 
 })(window, document, jQuery);
