@@ -33,7 +33,8 @@ module.exports = function(grunt){
                 files: {
                     'build/main.min.css': ['src/css/base.css'],
                     'build/index.min.css': ['src/css/index.css'],
-                    'build/font-end.min.css': ['src/css/fontEnd.css']
+                    'build/font-end.min.css': ['src/css/fontEnd.css'],
+                    'build/dot-net.min.css' : ['src/css/dotNet.css']
                 }
             }
         },
@@ -42,7 +43,8 @@ module.exports = function(grunt){
             main:{
                 files:[
                     {expand :true, src:["src/js/page/fontEnd.js"], dest: "build/data/",  flatten: true},
-                    {expand :true, src:["src/js/index.js"], dest: "build/data/",  flatten: true}
+                    {expand :true, src:["src/js/index.js"], dest: "build/data/",  flatten: true},
+                    {expand :true, src:["src/js/page/dotNet.js"], dest: "build/data/",  flatten: true}
                 ]
             }
         }
