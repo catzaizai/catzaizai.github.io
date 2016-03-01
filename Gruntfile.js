@@ -36,11 +36,21 @@ module.exports = function(grunt){
                     'build/font-end.min.css': ['src/css/fontEnd.css']
                 }
             }
+        },
+
+        copy: {
+            main:{
+                files:[
+                    {expand :true, src:["src/js/page/fontEnd.js"], dest: "build/data/",  flatten: true},
+                    {expand :true, src:["src/js/index.js"], dest: "build/data/",  flatten: true}
+                ]
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['uglify', 'cssmin']);
+    grunt.registerTask('default', ['uglify', 'cssmin', 'copy']);
 };
