@@ -7,7 +7,7 @@
 angular.module('fontEnd', []).controller('fontEndCtrl', function($scope, $http) {
     $scope.data = [];
     $scope.loadData = function(){
-        $http.get("/catzaizai.github.io/database/font_end.json").success(function(result){
+        $http.get("/catzaizai.github.io/database/fontEnd/index.json").success(function(result){
             $scope.data = result;
         })
     };
